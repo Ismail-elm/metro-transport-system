@@ -1,59 +1,68 @@
-🚆 Transport Network & Graph Traversal Project
-📖 Overview
+# 🚆 Transport Network & Graph Project
 
-This project models a transport network (bus, metro, tram, etc.) as a graph and provides tools to analyze it and find routes.
-Written in C, runs on the command line.
 
-⚡ Features
+A **C program** to model a transport network (bus, metro, tram…) as a **graph**, explore it, and find optimal routes.  
 
-🗂 Load network from a text file (metro.txt) with stations and edges.
+---
 
-ℹ️ Display station info (ID, name, degree, neighbors).
+## ✨ Features
 
-👥 List neighbors of a station.
+- 🗂 **Load a network** from a text file (`metro.txt`)  
+- ℹ️ **View station info** (ID, name, neighbors, degree)  
+- 👥 **List neighbors** of a station  
+- 🔗 **Check connectivity** between stations  
+- 🛣 **Find shortest paths** using **Dijkstra’s algorithm**  
+- 📊 **Analyze and sort stations** by degree  
 
-🔗 Check connectivity between stations.
+---
 
-🛣 Shortest path calculation using Dijkstra’s algorithm.
+## 🛠 Data Structures
 
-📊 Analyze and sort stations by degree.
+- **Adjacency lists** for graph representation  
+- **Dynamic arrays** for stations  
+- **Hash table** for efficient station lookup  
 
-🛠 Data Structures
+---
 
-📌 Graph represented with adjacency lists.
+## 🧮 Sorting
 
-🧩 Stations stored in a dynamic array.
+- Selection Sort, Insertion Sort, and Quicksort  
+- Tracks **comparisons** and **swaps**  
 
-⚡ Efficient lookup using a hash table.
+---
 
-🧮 Sorting Algorithms
+## 💻 Usage
 
-Selection Sort, Insertion Sort, and Quicksort
+Compile and run the program:
 
-Counts comparisons and swaps for analysis
-
-💻 Usage
-
-Compile and run:
-
+```bash
 make
 ./metro metro.txt
+````
+---
 
+## 💻 Interactive Menu
 
-Follow the interactive menu to explore the network.
+After running the program, follow the interactive menu:
+````
+===== TRANSPORT NETWORK MENU =====
+1 - View station info
+2 - List neighbors
+3 - Find shortest path
+4 - Sort stations by degree
+0 - Quit
+````
+## 📂 File Structure
+```
+.
+├─ src/
+│  ├─ main.c           # Program entry point
+│  ├─ graph.c          # Graph representation and adjacency lists
+│  ├─ dijkstra.c       # Shortest path algorithms
+│  ├─ sort.c           # Sorting algorithm
+├─ includes/
+│  └─ *.h              # Header files
+├─ data/
+│  └─ metro.txt
+└─ Makefile            # Build the project
 
-✅ Requirements
-
-C99/C11 standard
-
-gcc with -Wall -Wextra
-
-Only standard C library, no external libraries
-
-🎯 Goals
-
-Practice dynamic data structures (lists, arrays) in C
-
-Implement graph traversal and shortest path algorithms
-
-Write clean, modular, and documented code
